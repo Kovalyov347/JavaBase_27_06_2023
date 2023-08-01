@@ -7,16 +7,34 @@ public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.print("Enter please (M): ");
-        int M = scanner.nextInt();
 
-        System.out.print("Enter please (N): ");
-        int N = scanner.nextInt();
+        int M, N;
+        do {
+            System.out.print("Enter please (M > 0): ");
+            while (!scanner.hasNextInt()) {
+                System.out.println("Enter please only integers.");
+                scanner.next();
+            }
+            M = scanner.nextInt();
+        } while (M <= 0);
+
+        do {
+            System.out.print("Enter please (N > 0): ");
+            while (!scanner.hasNextInt()) {
+                System.out.println("Enter please only integers.");
+                scanner.next();
+            }
+            N = scanner.nextInt();
+        } while (N <= 0);
 
         int[][] matrix = new int[M][N];
         for (int i = 0; i < M; i++) {
             for (int j = 0; j < N; j++) {
                 System.out.printf("Enter please element of matrix [%d][%d]:", i, j);
+                while (!scanner.hasNextInt()) {
+                    System.out.println("Enter please only integers.");
+                    scanner.next();
+                }
                 matrix[i][j] = scanner.nextInt();
             }
         }
