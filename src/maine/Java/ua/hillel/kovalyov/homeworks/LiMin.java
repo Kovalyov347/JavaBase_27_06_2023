@@ -1,6 +1,6 @@
 package ua.hillel.kovalyov.homeworks;
 
-public class HomeWoks4China {
+public class LiMin {
     public static void main(String[] args) {
         String dynasty = "Li";
         int warrior = 13;
@@ -18,7 +18,6 @@ public class HomeWoks4China {
 
         System.out.printf("total power %s = %d %n", dynasty, ((warrior + shooter + rider) * totalWarriors));
         System.out.printf("total power %s = %d %n", dynasty2, ((warrior2 + shooter2 + rider2) * totalWarriors2));
+
     }
 }
-
-
